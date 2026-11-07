@@ -1,0 +1,7 @@
+.pio
+.vscode
+.idea
+*.o
+tests/host_tests
+tests/host_tests.exe
+.DS_Store

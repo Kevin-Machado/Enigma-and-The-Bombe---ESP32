@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Enigma</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Maquina Enigma</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/enigma">Enigma</a>
+      <a href="/bombe">The Bombe</a>
+    </nav>
+  </header>
+  <main>
+    <div class="card">
+      <div class="grid">
+        <div><label>Rotor izquierdo</label><select id="rl"></select></div>
+        <div><label>Rotor medio</label><select id="rm"></select></div>
+        <div><label>Rotor derecho</label><select id="rr"></select></div>
+        <div>
+          <label>Reflector</label>
+          <select id="ref"><option>B</option><option>C</option><option>A</option></select>
+        </div>
+        <div><label>Anillos (LMR)</label><input id="rings" value="AAA" maxlength="3"></div>
+        <div><label>Posiciones (LMR)</label><input id="pos" value="AAA" maxlength="3"></div>
+      </div>
+      <label>Plugboard (pares, ej. AB CD EF)</label>
+      <input id="plugs" value="">
+      <label>Texto</label>
+      <textarea id="text">HELLOWORLD</textarea>
+      <div class="row" style="margin-top:12px">
+        <button id="go">Cifrar / Descifrar</button>
+        <button class="secondary" id="rst">Restablecer</button>
+      </div>
+      <p class="muted">Enigma cifra y descifra con el mismo mecanismo. Restaure las posiciones iniciales para descifrar.</p>
+    </div>
+    <div class="card">
+      <label>Resultado</label>
+      <div class="out" id="out">-</div>
+      <p class="muted" id="meta"></p>
+    </div>
+  </main>
+  <script src="/app.js"></script>
+  <script>initEnigma()</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+:root{--bg:#0e1116;--panel:#171c24;--ink:#e8dcc4;--muted:#9a8f78;--line:#2c3340;--gold:#c9a227;--red:#b33a3a;--green:#3d8b5a;--yellow:#c9a227}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
+header{border-bottom:1px solid var(--line);padding:18px 24px;display:flex;justify-content:space-between;align-items:baseline}
+header h1{margin:0;font-size:22px;letter-spacing:.08em;text-transform:uppercase}
+header nav a{margin-left:16px;font-size:14px}
+main{max-width:980px;margin:0 auto;padding:24px}
+.card{background:var(--panel);border:1px solid var(--line);padding:18px 20px;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:12px;color:var(--muted);margin:8px 0 4px;letter-spacing:.06em;text-transform:uppercase}
+input,select,textarea,button{font:inherit;background:#10141b;color:var(--ink);border:1px solid var(--line);padding:8px 10px;width:100%}
+textarea{min-height:90px;letter-spacing:.12em}
+button{cursor:pointer;background:var(--gold);color:#111;border:0;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+button.secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}
+button.danger{background:var(--red);color:#fff}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.row>*{flex:1}
+.out{font-family:"Courier New",monospace;letter-spacing:.18em;white-space:pre-wrap;word-break:break-all}
+.muted{color:var(--muted);font-size:13px}
+.led{display:inline-block;width:14px;height:14px;border-radius:50%;background:#333;margin-right:6px;vertical-align:middle}
+.led.on.yellow{background:var(--yellow);box-shadow:0 0 8px var(--yellow)}
+.led.on.red{background:var(--red);box-shadow:0 0 8px var(--red)}
+.led.on.green{background:var(--green);box-shadow:0 0 8px var(--green)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:8px;text-align:left}
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.home-grid a.card{display:block;min-height:160px}
+@media(max-width:720px){.grid,.home-grid{grid-template-columns:1fr}header{flex-direction:column}header nav{margin-top:8px}}

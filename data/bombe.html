@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Bombe</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>The Bombe</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/enigma">Enigma</a>
+      <a href="/bombe">The Bombe</a>
+    </nav>
+  </header>
+  <main>
+    <div class="card">
+      <p class="muted">Version educativa. No es una reproduccion electromecanica historica. Una configuracion sin contradicciones es solo candidata.</p>
+      <div class="grid">
+        <div><label>Rotor izquierdo</label><select id="rl"></select></div>
+        <div><label>Rotor medio</label><select id="rm"></select></div>
+        <div><label>Rotor derecho</label><select id="rr"></select></div>
+        <div>
+          <label>Reflector</label>
+          <select id="ref"><option>B</option><option>C</option><option>A</option></select>
+        </div>
+        <div><label>Anillos (LMR)</label><input id="rings" value="AAA" maxlength="3"></div>
+        <div><label>Alineacion del crib</label><input id="align" value="0"></div>
+      </div>
+      <label>Plugboard conocido (vacio = identidad)</label>
+      <input id="plugs" value="">
+      <label>Texto cifrado</label>
+      <textarea id="cipher">KLHFRT</textarea>
+      <label>Crib</label>
+      <input id="crib" value="WETTER">
+      <div class="row" style="margin-top:12px">
+        <button id="start">Iniciar busqueda</button>
+        <button class="danger" id="cancel">Cancelar</button>
+        <button class="secondary" id="reset">Reiniciar</button>
+      </div>
+    </div>
+    <div class="card">
+      <p>
+        <span id="ly" class="led yellow"></span>Amarillo busqueda
+        <span id="lr" class="led red"></span>Rojo contradiccion
+        <span id="lg" class="led green"></span>Verde verificado
+      </p>
+      <p id="status">Estado: idle</p>
+      <p class="muted" id="detail"></p>
+    </div>
+    <div class="card">
+      <h3>Candidatos</h3>
+      <table>
+        <thead>
+          <tr><th>Posicion</th><th>Verificado</th><th>Recuperado</th><th>Stecker inferido</th></tr>
+        </thead>
+        <tbody id="cands"></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="/app.js"></script>
+  <script>initBombe()</script>
+</body>
+</html>
