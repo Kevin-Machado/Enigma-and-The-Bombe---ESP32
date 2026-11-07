@@ -1,0 +1,3 @@
+Simulacion funcional de la maquina Enigma de tres rotores y una version educativa de The Bombe, ambas en un unico ESP32. El microcontrolador ejecuta toda la logica criptografica, sirve dos interfaces web por Wi-Fi y controla los LED de The Bombe (amarillo: busqueda, rojo: contradiccion, verde: candidato verificado). Pensado para una exposicion de Historia sobre Alan Turing y Bletchley Park.
+
+
